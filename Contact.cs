@@ -17,27 +17,31 @@ namespace AddressBookSystem
         public int zipCode;
         public long phoneNumber;
         public string email;
-
-        //Constuctor - Can initialize value while creating object
-        public Contact()
+        public static Contact AddContact()
         {
+            Contact contact = new Contact();
+
             Console.WriteLine("Please enter the new contact details:");
             Console.Write("First Name: ");
-            this.firstName = Console.ReadLine();
+            contact.firstName = Console.ReadLine();
             Console.Write("Last Name: ");
-            this.lastName = Console.ReadLine();
+            contact.lastName = Console.ReadLine();
             Console.Write("Address: ");
-            this.address = Console.ReadLine();
+            contact.address = Console.ReadLine();
             Console.Write("City: ");
-            this.city = Console.ReadLine();
+            contact.city = Console.ReadLine();
             Console.Write("State: ");
-            this.state = Console.ReadLine();
+            contact.state = Console.ReadLine();
             Console.Write("Zip Code: ");
-            this.zipCode = Convert.ToInt32(Console.ReadLine());
+            contact.zipCode = Convert.ToInt32(Console.ReadLine());
             Console.Write("Phone Number: ");
-            this.phoneNumber = Convert.ToInt64(Console.ReadLine());
+            contact.phoneNumber = Convert.ToInt64(Console.ReadLine());
             Console.Write("Email: ");
-            this.email = Console.ReadLine();
+            contact.email = Console.ReadLine();
+
+            return contact;
+
         }
+    
     }
 }
