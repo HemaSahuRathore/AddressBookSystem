@@ -1,6 +1,6 @@
 ﻿namespace AddressBookSystem
 { /// <summary>
-  /// UC3 : Ability to edit existing contact person using their name
+  /// UC4 : Ability to delete contact using name
   /// </summary>
     public class Program
     {   //An entrypoint of Console App
@@ -12,12 +12,12 @@
                 Console.WriteLine("\nWelcome to the Address book");
                 do
                 {
-
                     Console.WriteLine("\nEnter from the below options:");
                     Console.WriteLine("1. Add new contact");
                     Console.WriteLine("2. Display added contacts");
                     Console.WriteLine("3. Edit Existing Contact Using Name");
-                    Console.WriteLine("4. Exit");
+                    Console.WriteLine("4. Delete Contact Using Name");
+                    Console.WriteLine("5. Exit");
 
                     option = Convert.ToInt32(Console.ReadLine());
 
@@ -28,12 +28,15 @@
                             addressBook.Add(Contact.AddContact());
                             break;
                         case 2:
-                            Contact.DisplayContact(addressBook);
+                            Contact.DisplayContact(addressBook); 
                             break;
                         case 3:
-                            Contact.EditContact(addressBook);
+                            Contact.EditContact(addressBook); 
                             break;
                         case 4:
+                            Contact.DeleteContact(addressBook); 
+                            break;
+                        case 5:
                             break;
                         default:
                             Console.WriteLine("Invalid Input");
